@@ -590,7 +590,7 @@ extension KingfisherWrapper where Base: KFCrossPlatformImage {
         return KingfisherWrapper.image(cgImage: cgImage, scale: targetScale, refImage: ref)
         #else
         
-        let format = UIGraphicsImageRendererFormat.preferred()
+        let format = UIGraphicsImageRendererFormat.default()
         format.scale = scale ?? self.scale
         let renderer = UIGraphicsImageRenderer(size: size, format: format)
         
